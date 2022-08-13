@@ -1,0 +1,2 @@
+# CypressAppActions
+Using AppActions pattern
