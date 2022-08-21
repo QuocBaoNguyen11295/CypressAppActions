@@ -16,6 +16,6 @@
 // Import commands.js using ES2015 syntax:
 import './app'
 import './loginAppActions'
-
+import './feedbackAppActions'
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
