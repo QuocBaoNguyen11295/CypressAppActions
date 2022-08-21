@@ -4,11 +4,15 @@ describe('Submit feedback',()=>{
     })
 
     it('Should fill out information and submit the feedback',()=>{
-        cy.submitFeedback('Bao Quoc','baonguyen@gmail.com','Test Test','Test')
+        cy.fixture('feedbackData').then(({name,email,title,message})=>{
+        cy.submitFeedback(name,email,title,message)
+        })
     })
 
     it('Should show correct message after submitting',()=>{
-       cy.checkCorrectMessage('Bao Quoc') 
+       cy.fixture('feedbackData').then(({name})=>{
+        cy.checkCorrectMessage(name)
+       })
     })
 
     after('Clear cookies and local storage',()=>{
